@@ -78,7 +78,7 @@ submitBtn.addEventListener('click',(event)=>{
 function checkNum(){
     if(input.value==currGuess)
     {
-    displayMssg.innerHTML='Well Done!! Your guess is absolutely right &#128540;';
+    displayMssg.innerHTML=`Well Done!! Your guess is absolutely right &#128540 The number was ${currGuess}`;
     endgame();
     }
     else if (input.value < currGuess) {
@@ -105,7 +105,7 @@ function remGuessUpdate(){
 //ending the game
 function endgame(){
     if (totalGuesses == 0&&input.value!=currGuess) {
-        displayMssg.innerHTML = 'Game Over!';
+        displayMssg.innerHTML = `Game Over! The number was ${currGuess}`;
     }
 
     input.setAttribute('disabled', '');
