@@ -31,8 +31,10 @@ window.addEventListener('load',()=>{
      
     
    if(mssg=='Well Done!! Your guess is absolutely right &#128540;'||mssg=='Game Over!')
+   {
+    guessesRem.innerHTML=' 0';
     newGameBtn.style.display='block';
-    
+   }
     
 });
 
