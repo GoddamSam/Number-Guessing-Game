@@ -25,6 +25,7 @@ window.addEventListener('load',()=>{
 
 
     prevGuesses.innerHTML=` ${guessArr}`;
+    console.log(localStorage.getItem('totalGuesses'));
     guessesRem.innerHTML=` ${totalGuesses}`;
     displayMssg.textContent=mssg;
      
@@ -89,12 +90,14 @@ function checkNum(){
 function guessUpdate(currentGuess){
     guessArr.push(currentGuess);
     prevGuesses.innerHTML=` ${guessArr}`;
+    localStorage.setItem('Array',guessArr);
 }
 
 //decreasing the no. of guesses
 function remGuessUpdate(){
     totalGuesses--;
     guessesRem.innerHTML=` ${totalGuesses}`;
+    localStorage.setItem('totalGuesses',totalGuesses);
 }
 
 //ending the game
